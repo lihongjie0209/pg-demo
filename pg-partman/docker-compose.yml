@@ -1,0 +1,18 @@
+name: pg-partman
+services:
+  postgres:
+    build: .
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: test
+      POSTGRES_SHARED_PRELOAD_LIBRARIES: pg_partman_bgw
+    ports:
+      - "15432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data: 
