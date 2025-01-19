@@ -2,6 +2,16 @@
 
 本项目包含了多个 PostgreSQL 相关的示例配置，每个子目录都是一个独立的示例。
 
+
+
+
+
+## PG架构图
+
+![架构图](./images/architecture.webp)
+
+
+
 ## 目录结构
 
 ### [pg-single](./pg-single/README.sh)
